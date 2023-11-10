@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Domain.Entities;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 
 namespace Persistence.Data
 {
@@ -20,5 +21,13 @@ namespace Persistence.Data
         public DbSet<Profesor> Profesores { get; set; }
         public DbSet<Tipo_Asignatura> Tipos_Asignaturas { get; set; }
         public DbSet<Tipo_Persona> Tipos_Personas { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder) {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Alumno_se_matricula_asignatura>(x => {
+                x.HasKey(y => new { y.AsignaturaId, y.Curso_EscolarId, y.PersonaId });
+            });
+        }
     }
 }
