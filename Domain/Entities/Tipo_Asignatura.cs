@@ -8,5 +8,6 @@ namespace Domain.Entities
     public class Tipo_Asignatura : BaseEntity
     {
         public string Tipo { get; set; }
+        public ICollection<Asignatura> Asignaturas { get; set; }
     }
 }
