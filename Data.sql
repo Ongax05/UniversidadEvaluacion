@@ -1,5 +1,4 @@
 USE universidad;
-
 INSERT INTO departamentos VALUES (1, 'Informática');
 INSERT INTO departamentos VALUES (2, 'Matemáticas');
 INSERT INTO departamentos VALUES (3, 'Economía y Empresa');
@@ -9,14 +8,10 @@ INSERT INTO departamentos VALUES (6, 'Química y Física');
 INSERT INTO departamentos VALUES (7, 'Filología');
 INSERT INTO departamentos VALUES (8, 'Derecho');
 INSERT INTO departamentos VALUES (9, 'Biología y Geología');
-
-
 INSERT INTO tipos_personas VALUES (1, 'Alumno');
 INSERT INTO tipos_personas VALUES (2, 'Profesor');
-
 INSERT INTO generos VALUES (1, 'Hombre');
 INSERT INTO generos VALUES (2, 'Mujer');
-
 INSERT INTO personas VALUES (1, '26902806M', 'Salvador', 'Sánchez', 'Pérez', 'Almería', 'Real del barrio alto', '950254837', '1991-03-28', 1, 1);
 INSERT INTO personas VALUES (2, '89542419S', 'Juan', 'Saez', 'Vega', 'Almería', 'Mercurio', '618253876', '1992-08-08', 1, 1);
 INSERT INTO personas VALUES (3, '11105554G', 'Zoe', 'Ramirez', 'Gea', 'Almería', 'Marte', '618223876', '1979-08-19', 2, 2);
@@ -41,20 +36,18 @@ INSERT INTO personas VALUES (21, '79089577Y', 'Juan', 'Gutiérrez', 'López', 'A
 INSERT INTO personas VALUES (22, '41491230N', 'Antonio', 'Domínguez', 'Guerrero', 'Almería', 'Cabo de Gata', '626652498', '1999-02-11', 1, 1);
 INSERT INTO personas VALUES (23, '64753215G', 'Irene', 'Hernández', 'Martínez', 'Almería', 'Zapillo', '628452384', '1996-03-12', 2, 1);
 INSERT INTO personas VALUES (24, '85135690V', 'Sonia', 'Gea', 'Ruiz', 'Almería', 'Mercurio', '678812017', '1995-04-13', 2, 1);
- 
-INSERT INTO profesores VALUES (1 ,3, 1);
-INSERT INTO profesores VALUES (2 ,5, 2);
-INSERT INTO profesores VALUES (3 ,8, 3);
-INSERT INTO profesores VALUES (4 ,10, 4);
-INSERT INTO profesores VALUES (5 ,12, 4);
-INSERT INTO profesores VALUES (6 ,13, 6);
-INSERT INTO profesores VALUES (7 ,14, 1);
-INSERT INTO profesores VALUES (8 ,15, 2);
-INSERT INTO profesores VALUES (9 ,16, 3);
-INSERT INTO profesores VALUES (10 ,17, 4);
-INSERT INTO profesores VALUES (11 ,18, 5);
-INSERT INTO profesores VALUES (12 ,20, 6);
-
+INSERT INTO profesores VALUES (1 , 3, 1);
+INSERT INTO profesores VALUES (2 , 5, 2);
+INSERT INTO profesores VALUES (3 , 8, 3);
+INSERT INTO profesores VALUES (4 , 10, 4);
+INSERT INTO profesores VALUES (5 , 12, 4);
+INSERT INTO profesores VALUES (6 , 13, 6);
+INSERT INTO profesores VALUES (7 , 14, 1);
+INSERT INTO profesores VALUES (8 , 15, 2);
+INSERT INTO profesores VALUES (9 , 16, 3);
+INSERT INTO profesores VALUES (10 , 17, 4);
+INSERT INTO profesores VALUES (11 , 18, 5);
+INSERT INTO profesores VALUES (12 , 20, 6);
 INSERT INTO grados VALUES (1, 'Grado en Ingeniería Agrícola (Plan 2015)');
 INSERT INTO grados VALUES (2, 'Grado en Ingeniería Eléctrica (Plan 2014)');
 INSERT INTO grados VALUES (3, 'Grado en Ingeniería Electrónica Industrial (Plan 2010)');
@@ -65,11 +58,9 @@ INSERT INTO grados VALUES (7, 'Grado en Biotecnología (Plan 2015)');
 INSERT INTO grados VALUES (8, 'Grado en Ciencias Ambientales (Plan 2009)');
 INSERT INTO grados VALUES (9, 'Grado en Matemáticas (Plan 2010)');
 INSERT INTO grados VALUES (10, 'Grado en Química (Plan 2009)');
-
 INSERT INTO tipos_asignaturas VALUES (1, 'Básica');
 INSERT INTO tipos_asignaturas VALUES (2, 'Obligatoria');
 INSERT INTO tipos_asignaturas VALUES (3 , 'Optativa');
-
 INSERT INTO asignaturas VALUES (1, 'Álgegra lineal y matemática discreta', 6, 1, 1, 3, 4, 1);
 INSERT INTO asignaturas VALUES (2, 'Cálculo', 6, 1, 1, 12, 4, 1);
 INSERT INTO asignaturas VALUES (3, 'Física para informática', 6, 1, 1, 3, 4, 1);
@@ -96,7 +87,7 @@ INSERT INTO asignaturas VALUES (23, 'Integración de las Tecnologías de la Info
 INSERT INTO asignaturas VALUES (24, 'Modelado y Diseño del Software 1', 6, 3, 1, NULL, 4, 3);
 INSERT INTO asignaturas VALUES (25, 'Multiprocesadores', 6, 3, 1, NULL, 4, 3);
 INSERT INTO asignaturas VALUES (26, 'Seguridad y cumplimiento normativo', 6, 3, 1, NULL, 4, 3);
-INSERT INTO asignaturas VALUES (27, 'Sistema de Información para las Organizaciones', 6, 3, 1, NULL, 4, 3); 
+INSERT INTO asignaturas VALUES (27, 'Sistema de Información para las Organizaciones', 6, 3, 1, NULL, 4, 3);
 INSERT INTO asignaturas VALUES (28, 'Tecnologías web', 6, 3, 1, NULL, 4, 3);
 INSERT INTO asignaturas VALUES (29, 'Teoría de códigos y criptografía', 6, 3, 1, NULL, 4, 3);
 INSERT INTO asignaturas VALUES (30, 'Administración de bases de datos', 6, 3, 2, NULL, 4, 3);
@@ -153,13 +144,11 @@ INSERT INTO asignaturas VALUES (80, 'Biotecnología vegetal', 6, 3, 2, NULL, 7, 
 INSERT INTO asignaturas VALUES (81, 'Genómica y proteómica', 4.5, 3, 2, NULL, 7, 2);
 INSERT INTO asignaturas VALUES (82, 'Procesos biotecnológicos', 6, 3, 2, NULL, 7, 2);
 INSERT INTO asignaturas VALUES (83, 'Técnicas instrumentales avanzadas', 4.5, 3, 2, NULL, 7, 2);
-
 INSERT INTO cursos_escolares VALUES (1, '2014-01-01', '2015-01-01');
 INSERT INTO cursos_escolares VALUES (2, '2015-01-01', '2016-01-01');
 INSERT INTO cursos_escolares VALUES (3, '2016-01-01', '2017-01-01');
 INSERT INTO cursos_escolares VALUES (4, '2017-01-01', '2018-01-01');
 INSERT INTO cursos_escolares VALUES (5, '2018-01-01', '2019-01-01');
-
 INSERT INTO alumno_se_matricula_asignaturas VALUES (1, 1, 1);
 INSERT INTO alumno_se_matricula_asignaturas VALUES (1, 2, 1);
 INSERT INTO alumno_se_matricula_asignaturas VALUES (1, 3, 1);
