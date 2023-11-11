@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Persistence.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialMigration : Migration
+    public partial class NullableFixMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -185,7 +185,7 @@ namespace Persistence.Data.Migrations
                     Creditos = table.Column<double>(type: "double", nullable: false),
                     Curso = table.Column<byte>(type: "tinyint unsigned", nullable: false),
                     Cuatrimestre = table.Column<byte>(type: "tinyint unsigned", nullable: false),
-                    ProfesorId = table.Column<int>(type: "int", nullable: false),
+                    ProfesorId = table.Column<int>(type: "int", nullable: true),
                     GradoId = table.Column<int>(type: "int", nullable: false),
                     Tipo_AsignaturaId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -202,8 +202,7 @@ namespace Persistence.Data.Migrations
                         name: "FK_Asignaturas_Profesores_ProfesorId",
                         column: x => x.ProfesorId,
                         principalTable: "Profesores",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        principalColumn: "Id");
                     table.ForeignKey(
                         name: "FK_Asignaturas_Tipos_Asignaturas_Tipo_AsignaturaId",
                         column: x => x.Tipo_AsignaturaId,

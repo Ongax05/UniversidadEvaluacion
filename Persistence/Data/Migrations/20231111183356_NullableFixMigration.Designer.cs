@@ -11,8 +11,8 @@ using Persistence.Data;
 namespace Persistence.Data.Migrations
 {
     [DbContext(typeof(UniversidadDbContext))]
-    [Migration("20231110224839_InitialMigration")]
-    partial class InitialMigration
+    [Migration("20231111183356_NullableFixMigration")]
+    partial class NullableFixMigration
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -63,7 +63,7 @@ namespace Persistence.Data.Migrations
                     b.Property<string>("Nombre")
                         .HasColumnType("longtext");
 
-                    b.Property<int>("ProfesorId")
+                    b.Property<int?>("ProfesorId")
                         .HasColumnType("int");
 
                     b.Property<int>("Tipo_AsignaturaId")
@@ -270,9 +270,7 @@ namespace Persistence.Data.Migrations
 
                     b.HasOne("Domain.Entities.Profesor", "Profesor")
                         .WithMany("Asignaturas")
-                        .HasForeignKey("ProfesorId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("ProfesorId");
 
                     b.HasOne("Domain.Entities.Tipo_Asignatura", "Tipo_Asignatura")
                         .WithMany("Asignaturas")
