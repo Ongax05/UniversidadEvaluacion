@@ -11,9 +11,10 @@ namespace Domain.Entities
         public double Creditos { get; set; }
         public byte Curso { get; set; }
         public byte Cuatrimestre { get; set; }
-        
-        public int ProfesorId { get; set; }
-        public Profesor Profesor { get; set; }
+        #nullable enable
+        public int ? ProfesorId { get; set; }
+        public Profesor ? Profesor { get; set; }
+        #nullable disable
         public int GradoId { get; set; }
         public Grado Grado { get; set; }
         public int Tipo_AsignaturaId { get; set; }

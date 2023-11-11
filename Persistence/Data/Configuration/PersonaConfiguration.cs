@@ -18,7 +18,7 @@ namespace Persistence.Data.Configuration
             builder.Property(p=>p.Apellido2).HasColumnName("Apellido2").HasMaxLength(50).IsRequired();
             builder.Property(p=>p.Ciudad).HasColumnName("Ciudad").HasMaxLength(50).IsRequired();
             builder.Property(p=>p.Direccion).HasColumnName("Direccion").HasMaxLength(50).IsRequired();
-            builder.Property(p=>p.Telefono).HasColumnName("Telefono").HasMaxLength(50).IsRequired();
+            builder.Property(p=>p.Telefono).HasColumnName("Telefono").HasMaxLength(50).IsRequired(false);
             builder.Property(p=>p.Fecha_Nacimiento).HasColumnName("Fecha_Nacimiento").HasColumnType("datetime").IsRequired();
             builder.HasOne(p=>p.Genero).WithMany(p=>p.Personas).HasForeignKey(p=>p.GeneroId);
             builder.HasOne(p=>p.Tipo_Persona).WithMany(p=>p.Personas).HasForeignKey(p=>p.Tipo_PersonaId);

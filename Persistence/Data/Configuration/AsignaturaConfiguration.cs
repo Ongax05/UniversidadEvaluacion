@@ -18,7 +18,7 @@ namespace Persistence.Data.Configuration
             builder.Property(p=>p.Creditos).HasColumnName("Creditos").HasColumnType("double").IsRequired();
             builder.Property(p=>p.Curso).HasColumnName("Curso").HasColumnType("tinyint").IsRequired();
             builder.Property(p=>p.Cuatrimestre).HasColumnName("Cuatrimestre").HasColumnType("tinyint").IsRequired();
-            builder.HasOne(p=>p.Profesor).WithMany(p=>p.Asignaturas).HasForeignKey(p=>p.ProfesorId);
+            builder.HasOne(p=>p.Profesor).WithMany(p=>p.Asignaturas).HasForeignKey(p=>p.ProfesorId).IsRequired(false);
             builder.HasOne(p=>p.Grado).WithMany(p=>p.Asignaturas).HasForeignKey(p=>p.GradoId);
             builder.HasOne(p=>p.Tipo_Asignatura).WithMany(p=>p.Asignaturas).HasForeignKey(p=>p.Tipo_AsignaturaId);
         }

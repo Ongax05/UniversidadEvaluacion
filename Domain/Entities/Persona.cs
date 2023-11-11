@@ -13,7 +13,9 @@ namespace Domain.Entities
         public string Apellido2 { get; set; }
         public string Ciudad { get; set; }
         public string Direccion { get; set; }
-        public string Telefono { get; set; }
+        #nullable enable    
+        public string ? Telefono { get; set; }
+        #nullable disable
         public DateOnly Fecha_Nacimiento { get; set; }
         public int GeneroId { get; set; }
         public Genero Genero { get; set; }
