@@ -153,7 +153,7 @@
 26. Devuelve un listado con las asignaturas que no tienen un profesor asignado.
 
      ```sql
-       # Consulta Aqui
+       http://localhost:5281/api/Asignatura/SubjectsWithoutTeacher
      ```
 
 27. Devuelve un listado con todos los departamentos que no han impartido asignaturas en ningún curso escolar.
