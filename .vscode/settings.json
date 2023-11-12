@@ -4,6 +4,7 @@
         "Persistence",
         "Domain",
         "Application",
-        "API"
+        "API",
+        "MySql Helpers"
     ]
 }

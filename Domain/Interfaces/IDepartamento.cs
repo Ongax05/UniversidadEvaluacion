@@ -8,6 +8,7 @@ namespace Domain.Interfaces
 {
     public interface IDepartamento : IGenericInterface<Departamento>
     {
-        
+        Task<IEnumerable<Departamento>> DepartmentsWithTeachersTeachingAtGrade4 ();
+        Task <IEnumerable<Departamento>> DepartmentsWithoutTeachers();
     }
 }

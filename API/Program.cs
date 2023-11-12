@@ -1,4 +1,6 @@
 using System.Reflection;
+using Application.UnitOfWork;
+using Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using Persistence.Data;
 
@@ -11,6 +13,7 @@ builder.Services.AddAutoMapper(Assembly.GetEntryAssembly());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IUnitOfWork,UnitOfWork>();
 
 builder.Services.AddDbContext<UniversidadDbContext>(o=> {
     string c = builder.Configuration.GetConnectionString("Mysql");
